@@ -1,0 +1,11 @@
+.venv/
+.upstream/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+data/fly-brain/
+brain/output/
+minecraft-plugin/.gradle/
+minecraft-plugin/build/
+minecraft-plugin/run/

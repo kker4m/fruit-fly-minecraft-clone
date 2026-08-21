@@ -1,0 +1,98 @@
+{
+  "dataset": "FlyWire FAFB v783 via Codex",
+  "license": "FlyWire annotations are CC-BY-NC 4.0; see https://flywire.ai/tos",
+  "boundary": "Filters select anatomically annotated candidate populations. They do not prove that Minecraft variables are native stimuli or that decoded spikes constitute behavioral decisions.",
+  "populations": [
+    {
+      "name": "sensory_visual_photoreceptors",
+      "role": "visual",
+      "filters": {"super_class": "sensory", "class": "visual", "sub_class": "photo_receptor"},
+      "evidence": "Codex hierarchical classification",
+      "source": "https://codex.flywire.ai/app/stats?data_version=783&filter_string=super_class%20%3D%3D%20sensory"
+    },
+    {
+      "name": "sensory_visual_ocellar",
+      "role": "visual_light",
+      "filters": {"super_class": "sensory", "class": "visual", "sub_class": "ocellar"},
+      "evidence": "Codex hierarchical classification",
+      "source": "https://codex.flywire.ai/app/stats?data_version=783&filter_string=class%20%3D%3D%20visual"
+    },
+    {
+      "name": "sensory_visual_looming_lplc2",
+      "role": "visual_looming_candidate",
+      "filters": {"primary_type": "LPLC2"},
+      "evidence": "Codex cell type plus Klapoetke et al. 2017",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7457385/"
+    },
+    {
+      "name": "sensory_visual_looming_lc4",
+      "role": "visual_looming_candidate",
+      "filters": {"primary_type": "LC4"},
+      "evidence": "Codex cell type plus Ache et al. 2019",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6797552/"
+    },
+    {
+      "name": "sensory_olfactory",
+      "role": "olfactory",
+      "filters": {"super_class": "sensory", "class": "olfactory"},
+      "evidence": "Codex hierarchical classification",
+      "source": "https://codex.flywire.ai/app/stats?data_version=783&filter_string=class%20%3D%3D%20olfactory"
+    },
+    {
+      "name": "sensory_gustatory_sugar_water",
+      "role": "gustatory_food_candidate",
+      "filters": {"super_class": "sensory", "class": "gustatory", "sub_class": "sugar/water"},
+      "evidence": "Codex hierarchical classification; Minecraft food mapping remains engineered",
+      "source": "https://codex.flywire.ai/app/stats?data_version=783&filter_string=class%20%3D%3D%20gustatory"
+    },
+    {
+      "name": "sensory_mechanosensory",
+      "role": "mechanosensory",
+      "filters": {"super_class": "sensory", "class": "mechanosensory"},
+      "evidence": "Codex hierarchical classification; contact/obstacle transforms remain engineered",
+      "source": "https://codex.flywire.ai/app/stats?data_version=783&filter_string=class%20%3D%3D%20mechanosensory"
+    },
+    {
+      "name": "motor_descending_all",
+      "role": "descending_readout_pool",
+      "filters": {"super_class": "descending"},
+      "evidence": "Codex hierarchical classification",
+      "source": "https://codex.flywire.ai/app/stats?data_version=783&filter_string=super_class%20%3D%3D%20descending"
+    },
+    {
+      "name": "motor_turning_dna01",
+      "role": "turning_candidate",
+      "filters": {"super_class": "descending", "primary_type": "DNa01"},
+      "evidence": "Codex cell type plus Yang et al. steering studies",
+      "source": "https://elifesciences.org/articles/102230"
+    },
+    {
+      "name": "motor_turning_dna02",
+      "role": "turning_candidate",
+      "filters": {"super_class": "descending", "primary_type": "DNa02"},
+      "evidence": "Codex cell type plus Yang et al. steering studies",
+      "source": "https://elifesciences.org/articles/102230"
+    },
+    {
+      "name": "motor_forward_dnp09",
+      "role": "forward_walking_candidate",
+      "filters": {"super_class": "descending", "primary_type": "DNp09"},
+      "evidence": "Codex cell type; upstream P9 experiment; Rayshubskiy et al. 2022",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9435592/"
+    },
+    {
+      "name": "motor_backward_mdn",
+      "role": "backward_walking_candidate",
+      "filters": {"super_class": "descending", "primary_type": "MDN"},
+      "evidence": "Codex cell type plus Moonwalker descending-neuron literature",
+      "source": "https://elifesciences.org/articles/38554"
+    },
+    {
+      "name": "motor_escape_dnp01",
+      "role": "escape_candidate",
+      "filters": {"super_class": "descending", "primary_type": "DNp01"},
+      "evidence": "Codex aliases Giant_Fiber/GF plus giant-fiber escape literature",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9115102/"
+    }
+  ]
+}

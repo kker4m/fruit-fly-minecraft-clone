@@ -1,0 +1,14 @@
+brain-service-uri: "ws://127.0.0.1:8765"
+control-period-ticks: 5
+brain-step-ms: 50.0
+diagnostic-logging: true
+command-timeout-ms: 2000
+stale-command-ms: 750
+reconnect-delay-ticks: 100
+obstacle-range-blocks: 8.0
+food-range-blocks: 16
+food-scan-period-ticks: 20
+max-horizontal-speed: 0.32
+max-yaw-degrees-per-command: 18.0
+escape-horizontal-drive: 0.8
+idle-forward-drive: 0.15

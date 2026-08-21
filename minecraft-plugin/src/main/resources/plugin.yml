@@ -1,0 +1,15 @@
+name: FlyCraft
+version: ${version}
+main: dev.flycraft.plugin.FlyCraftPlugin
+api-version: '1.21'
+authors: [FlyCraft]
+description: Closed-loop FAFB v783 neural controller for a Minecraft Spider
+commands:
+  flycraft:
+    description: Manage the FlyCraft neural Spider
+    usage: /flycraft <spawn|remove|status>
+    permission: flycraft.admin
+permissions:
+  flycraft.admin:
+    description: Manage the FlyCraft controller
+    default: op

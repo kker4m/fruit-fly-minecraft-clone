@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "flycraft-brain"
+version = "0.1.0"
+description = "Persistent FAFB v783 neural runtime for FlyCraft"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "brian2==2.8.0",
+  "numpy==1.26.4",
+  "pandas==2.2.3",
+  "pyarrow==19.0.1",
+  "websockets==15.0.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["brain/src/flycraft_brain"]
+
+[tool.pytest.ini_options]
+testpaths = ["brain/tests"]
+addopts = "-q"
