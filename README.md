@@ -2,6 +2,32 @@
 
 FAFB v783 fruit-fly connectome tabanlı persistent LIF simülasyonunu Minecraft'a bağlama projesi.
 
+## Proje sınırı ve kaynaklar
+
+FlyCraft'ın özgün katkısı, mevcut meyve sineği connectome/model çalışmalarını
+Minecraft ile kapalı döngüde çalıştıran entegrasyon katmanıdır: persistent
+simülasyon servisi, sensory encoder, motor decoder, versioned WebSocket
+protokolü ve Paper plugin'i.
+
+Bu repository, connectome verisini veya FlyWire annotation tablolarını üretmez
+ve büyük veri dosyalarını yeniden dağıtmaz:
+
+- FAFB v783 LIF modeli, parametreleri ve model veri dosyaları
+  [`eonsystemspbc/fly-brain`](https://github.com/eonsystemspbc/fly-brain)
+  projesinin sabitlenmiş
+  [`680b7b3`](https://github.com/eonsystemspbc/fly-brain/commit/680b7b3d8d1134bf3cbd289b892cf5d37f097d34)
+  commit'ine dayanır.
+- FlyWire FAFB v783 annotation metadata'sı
+  [FlyWire Codex](https://codex.flywire.ai/) üzerinden alınır ve FlyWire
+  koşulları kapsamında CC-BY-NC 4.0'a tabidir.
+- İndirme scriptleri bu kaynaklardan veri çeker, beklenen SHA-256
+  checksum'larını doğrular ve dosyaları Git dışında `data/fly-brain/` altında
+  tutar.
+
+Upstream model, veri ve annotation kaynaklarının kendi kullanım/lisans
+koşulları geçerlidir. Bu projeye ait Minecraft entegrasyonu bu kaynakların
+sahipliğini iddia etmez.
+
 ## Aşama 1–5 durumu
 
 Tamamlanan temel:
